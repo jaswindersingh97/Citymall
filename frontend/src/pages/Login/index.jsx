@@ -1,9 +1,6 @@
-import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-
 export default function Login() {
   const [username, setUsername] = useState('');
-  const navigate = useNavigate();
 
   useEffect(() => {
     document.title = 'Login | MemeVerse';

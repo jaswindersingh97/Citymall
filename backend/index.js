@@ -41,6 +41,9 @@ app.get("/test",(req,res)=>{
 const memes = require("./routes/memes");
 app.use("/memes", memes)
 
+const leaderboard = require('./routes/leaderboard');
+app.use('/leaderboard', leaderboard);
+
 const port = 3000;
 server.listen(port, ()=>{
     console.log("server is running on port ", port);
