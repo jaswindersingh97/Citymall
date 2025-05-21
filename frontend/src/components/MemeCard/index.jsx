@@ -12,7 +12,6 @@ export default function MemeCard({ meme, onBid, onVote, onGenerateCaption }) {
   });
 
   useEffect(() => {
-    console.log(state)
   setState({
     bidAmount: '',
     loadingCaption: false,

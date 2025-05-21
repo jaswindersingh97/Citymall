@@ -8,8 +8,14 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<MemeGallery />} />
+        <Route
+          path="/"
+          element={username ? <MemeGallery /> : <Navigate to="/login" replace />}
+        />
+        <Route
+          path="/login"
+          element={username ? <Navigate to="/" replace /> : <Login />}
+        />
       </Routes>
     </BrowserRouter>
   );
